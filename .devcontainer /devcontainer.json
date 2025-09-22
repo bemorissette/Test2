@@ -1,0 +1,21 @@
+{
+  "name": "FastAPI + NLP Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "python.pythonPath": "/usr/local/bin/python",
+        "jupyter.jupyterServerType": "local",
+        "jupyter.notebookFileRoot": "${workspaceFolder}",
+        "python.dataScience.jupyterServerURI": "local"
+      }
+    }
+  },
+  "forwardPorts": [8080],
+  "postStartCommand": "pip install --upgrade pip && pip install -r requirements.txt ipykernel && python -m spacy download en_core_web_sm || true"
+}
