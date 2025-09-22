@@ -1,0 +1,8 @@
+beautifulsoup4
+python-slugify
+pdfminer.six
+spacy
+uvicorn[standard]
+fastapi
+nest-asyncio
+pyngrok
